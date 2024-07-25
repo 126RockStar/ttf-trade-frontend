@@ -1,0 +1,54 @@
+@import '../../../sassStyles/mixins';
+
+.expanded-info {
+  display: flex;
+  flex-direction: column;
+  background-color: #202231;
+
+  &--top {
+    display: flex;
+    flex-direction: row;
+
+    &--trading {
+      padding: 20px 15px;
+      min-width: 670px;
+      max-width: 675px;
+    }
+
+    &--graph {
+      flex: 1;
+      padding: 20px 15px;
+    }
+  }
+
+  &--bottom {
+    width: 100%;
+    padding: 15px;
+  }
+}
+
+@media screen and (min-width : 320px) and (max-width : 1200px) {
+  .expanded-info {
+    width: 98vw;
+    &--top {
+      display: block;
+
+      &--trading {
+        width: 98vw;
+        min-width: initial;
+        max-width: initial;
+        padding: 8px;
+      }
+
+      &--graph {
+        width: 98vw;
+        padding: 8px;
+      }
+    }
+
+    &--bottom {
+      width: 100%;
+      padding: 10px;
+    }
+  }
+}

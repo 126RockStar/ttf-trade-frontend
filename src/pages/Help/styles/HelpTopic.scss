@@ -1,0 +1,71 @@
+.help-topic-page {
+	margin-top: 15px;
+	padding: 20px;
+	height: 100%;
+    display: flex;
+    flex-direction: column;
+
+	&--top {
+		display: flex;
+		align-items: center;
+
+		.search {
+			flex: 1;
+		}
+	}
+
+	&--bottom {
+		display: flex;
+		flex-direction: row;
+		margin-top: 20px;
+		height: 100%;
+
+		.left {
+			width: 20%;
+
+			.tree {
+				height: 100%;
+			}
+
+			.card-style {
+				padding: 10px;
+				height: 100%;
+			}
+		}
+
+		.right {
+			width: 80%;
+
+			.card-style {
+				padding: 10px;
+				margin-left: 10px;
+				height: 100%;
+
+				.wrapper {
+					display: grid;
+					grid-template-columns: repeat(3, 1fr);
+					grid-gap: 20px;
+					background-color: #fff;
+					color: #444;
+					margin: 30px 50px;
+				}
+
+				.box {
+					display: flex;
+					justify-content: center;
+					background-color: #444;
+					color: #fff;
+					border-radius: 5px;
+					font-size: 150%;
+					display: flex;
+					align-items: center;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 320px) and (max-width: 1200px) {
+	.help-topic-page {
+	}
+}

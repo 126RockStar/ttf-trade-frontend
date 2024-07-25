@@ -1,0 +1,92 @@
+.lower-navbar {
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+}
+
+.error-message {
+  height: 40px;
+  position: absolute;
+  top: -40px;
+  background: rgb(242, 40, 40);
+  color: white;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 5px 20px;
+  justify-content: space-between;
+  font-size: 15px;
+
+  .message {
+    display: flex;
+  }
+
+  span {
+    text-align: center;
+  }
+
+  .action-bar {
+    display: flex;
+    align-items: center;    
+
+    .continue-btn {
+      border: none;
+      background: #fbbaba;
+      border-radius: 5px;
+      color: red;
+      font-weight: bold;
+      margin-right: 10px;
+    }
+  }
+}
+
+.nav-item-three {
+  width: 34vw;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.nav-item-four {
+  width: 25%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+.nav-item-four:hover {
+  background-color: rgb(200 219 255);
+}
+
+.nav-item-three:hover {
+  background-color: rgb(149, 183, 245);
+  cursor: pointer;
+}
+
+@media screen and (min-width: 320px) and (max-width: 900px) {
+	.error-message {
+    height: 90px;
+    position: absolute;
+    top: -90px;
+    background: rgb(242, 40, 40);
+    color: white;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 5px 20px;
+    justify-content: space-between;
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,139 @@
+@import '../../../sassStyles/mixins';
+@import '../../../sassStyles/typography';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  background-color: #0D1732;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+
+  .side-menu {
+    width: 50px;
+    display: flex;
+    align-items: center;
+  }
+
+  .main-menu {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+    .header-icon {
+      text-align: center;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .header-summary {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  
+      .account-summary {
+  
+        display: flex;
+        align-items: center;
+  
+        .select {
+            position: relative;
+            display: block;
+            line-height: 3;
+            overflow: hidden;
+            margin-right: 10px;
+  
+            @media (max-width: 800px) {
+              line-height: 2;
+            }
+
+            select {
+              outline: 0;
+              background: #0D1732;
+              color: white;
+              cursor: pointer;
+              border: none;
+              border-radius: 3px;
+              text-align: center;
+              padding-right: 5px;
+              font-size: 20px;
+              min-width: none;
+            }
+        }
+      }
+
+      .account-summary-mobile {
+        font-size: $font-size-less;
+        color: white;
+
+        .title {
+          color: white;
+          text-align: center;
+        }
+
+        .title-menu {
+          width: 100vw;
+          background: #101633;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          right: 0;
+          bottom: -200px;
+          height: 200px;
+          color: white;
+          border-top: 1px solid;
+
+          &--item {
+            padding: 10px 0;
+            text-align: center;
+          }
+        }        
+      }
+  
+      .account-error {
+        color: $tradeview-negative;
+        font-size: $font-size-medium;   
+        text-align: center;
+        max-width: 600px;
+      }
+    }
+  
+    .ttf-image {
+      margin-right: 13px;
+    }
+  }
+}
+
+@include smMinBreakPoint {
+  .header {
+    .main-menu {
+      .header-icon {
+        display: none;
+      }
+
+      .header-summary {
+        .account-summary {
+          .select {
+            line-height: 2;
+
+            select {
+              font-size: $font-size-less;
+              min-width: 300px;
+            }
+          }
+        }
+
+        .account-error {
+          font-size: $font-size-less;
+        }
+      }
+    }
+  }
+}

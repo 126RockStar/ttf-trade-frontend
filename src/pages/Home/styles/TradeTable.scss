@@ -1,0 +1,174 @@
+@import '../../../sassStyles/mixins';
+@import '../../../sassStyles/typography';
+
+.trade-table {
+  overflow: auto;
+  max-width: 100vw;
+  max-height: 300px;
+
+  table {
+    width: 100%;
+    font-size: $font-size-medium;
+    font-family: sans-serif;
+
+    thead {
+      tr,
+      th {
+        border-top: none;
+        border-bottom: none !important;
+        color: #ffffff;
+        background: black;
+        height: 50px;
+      }
+    }
+    tbody {
+      th,
+      td {
+        color: #777;
+        font-weight: 400;
+        font-weight: 300;
+
+        small {
+          color: darken(#ccc, 10%);
+          font-weight: 300;
+        }
+      }
+      tr {
+        &:not(.spacer) {
+          border-radius: 7px;
+          overflow: hidden;
+          transition: 0.3s all ease;
+          &:hover {
+            box-shadow: 0 2px 10px -5px rgba(#000000, 0.1);
+          }
+        }
+        th,
+        td {
+          background: #161522;
+          border: none;
+          transition: 0.3s all ease;
+          a {
+            color: darken(#ccc, 10%);
+          }
+          &:first-child {
+            border-top-left-radius: 0px;
+            border-bottom-left-radius: 0px;
+          }
+          &:last-child {
+            border-top-right-radius: 0px;
+            border-bottom-right-radius: 0px;
+          }
+        }
+        &.spacer {
+          td {
+            padding: 0 !important;
+            height: 3px;
+            border-radius: 0 !important;
+            background: transparent !important;
+          }
+        }
+        &.active,
+        &:hover {
+          th,
+          td {
+            a {
+              color: #ffffff;
+            }
+            color: #ffffff;
+            background: lighten(#25252b, 4%);
+          }
+        }
+      }
+    }
+  }
+
+  .date-column {
+    white-space: pre-line;
+  }
+
+  .open-status {
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: #4BAF92;
+    font-weight: bold;
+  }
+
+  .canceled-status {
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: #EDA62A;
+    font-weight: bold;
+  }
+
+  .closed-status {
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background:#868CB7;
+    font-weight: bold;
+  }
+
+  .error-status {
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background:#FA0559;
+    font-weight: bold;
+  }
+
+  .normal-status {
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background:#e4d6db;
+    font-weight: bold;
+  }
+
+  .cancel-btn {
+    border: none;
+    background: #2e2874;
+    border-radius: 5px;
+    padding: 5px 15px;
+    color: white;
+  }
+
+  .cancel-btn:hover {
+    background: #484194;
+  }
+
+  .cancel-btn-disable {
+    border: none;
+    background: #8b8b8b;
+    border-radius: 5px;
+    padding: 5px 15px;
+    color: rgb(233, 233, 233);
+  }
+
+  .side-buy {
+    color: lime;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 5px;
+    background: #28343f;
+  }
+
+  .side-sell {
+    color: #ff0000;
+    font-weight: bold;
+    padding: 5px 15px;
+    border-radius: 5px;
+    background: #3f2e43;
+  }
+
+}
+
+@media screen and (min-width : 320px) and (max-width : 1200px) {
+  .trade-table {
+    max-height: 210px;
+    table {
+      font-size: 10px;
+    }
+  }
+}

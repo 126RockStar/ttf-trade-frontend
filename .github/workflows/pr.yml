@@ -1,0 +1,24 @@
+name: Frontend CI
+
+on:
+  pull_request:
+    branches:
+      - main
+      - v*
+  push:
+    branches:
+      - v*
+
+jobs:
+  test_pr:
+    runs-on: ubuntu-latest
+    env:
+      CI: false
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 18.0.0
+      - run: npm install --legacy-peer-deps
+      # - run: npm run test
+      - run: npm run build

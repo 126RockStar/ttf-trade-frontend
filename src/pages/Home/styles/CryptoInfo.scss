@@ -1,0 +1,186 @@
+@import '../../../sassStyles/mixins';
+@import '../../../sassStyles/typography';
+
+.crypto-info-row {
+  border-bottom: 1px solid #5c5dc7;
+  border-radius: 1rem;
+  margin: 1rem;
+  padding: 1rem;
+}
+
+.crypto-info-row:hover {
+  background-color: #0D1732;
+}
+
+.expander-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .expand-icon {
+    margin-right: 10px;
+  }
+}
+
+.cryptoIcon {
+  height: 30px;
+  width: 30px;
+  margin-right: 20px;
+}
+
+.basic-info {
+  padding: 1.2rem;
+  text-align: initial;
+  margin-left: 6.5rem;
+}
+
+.basic-info > h1 {
+  margin: 0.5rem;
+  margin-left: 5rem;
+}
+
+.more-info {
+  display: flex;
+  justify-content: space-around;
+}
+
+.crypto-div:hover {
+  cursor: pointer;
+}
+
+.table-data {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.data-column {
+  .popup-button {
+    background: transparent;
+    border: none;
+
+    &--text {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .icon {
+      }
+
+      .description {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        color: white;
+
+        &--abb {
+          font-size: $font-size-large;
+          font-weight: bold;
+        }
+
+        &--name {
+          font-size: $font-size-small;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
+
+.month-12 {
+}
+
+#popup-root {
+  .popup-window {
+    background: white;
+    max-width: 800px;
+    width: 80vw !important;
+    height: auto !important;
+    border-radius: 15px !important;
+    padding: 15px 40px;
+    box-shadow: rgb(0 0 0 / 40%) 0 10px 20px;
+
+    &--top {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      span {
+        font-weight: bold;
+      }
+    }
+
+    &--description {
+      margin-top: 10px;
+      color: black;
+      word-wrap: break-word;
+      height: 200px;
+      overflow: auto;
+    }
+  }
+}
+
+.modal-overlay {
+  background: rgb(0 0 0 / 75%);
+  position: fixed;
+  inset: 0px;
+  z-index: 1000;
+}
+
+.iframe-popup {
+  width: 70vw;
+  height: 70vh;
+}
+
+.symbol-column {
+  text-align: left !important;
+}
+
+.price-column {
+  text-align: center !important;
+}
+
+.profit-column {
+  text-align: center !important;
+}
+
+
+@include smMinBreakPoint {
+  .expander-div {
+    flex-direction: column-reverse;
+
+    .expand-icon {
+      margin-right: 0px;
+      width: 20px;
+    }
+  }
+
+  .data-column {
+    .popup-button {
+      &--text {
+        .description {
+          margin-left: 0;
+
+          &--name {
+            display: none;
+          }
+
+          &--abb {
+            font-size: $font-size-mobile;
+          }
+        }
+      }
+    }
+  }
+
+  .month-12 {
+    display: none;
+  }
+
+  .cryptoIcon {
+    height: 25px;
+    width: 25px;
+    margin-right: 5px;
+  }
+}

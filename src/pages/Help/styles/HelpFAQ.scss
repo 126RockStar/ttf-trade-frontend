@@ -1,0 +1,72 @@
+.help-faq-page {
+	margin-top: 20px;
+	.accordion .card {
+		background: none;
+		border: none;
+		margin-bottom: 25px;
+	}
+	.accordion .card .card-header {
+		display: flex;
+		flex-direction: row;
+		background: none;
+		border: none;
+		padding: .4rem 1rem;
+		font-family: "Roboto", sans-serif;
+	}
+	.accordion .card-header h2 span {
+		float: left;
+		margin-top: 10px;
+	}
+	.accordion .card-header {
+		color: #2f2f31;
+		font-size: 20px;
+		text-align: left;
+		position: relative;
+		font-weight: 500;
+		padding-left: 1.5rem;
+		width: 100%;
+		cursor: pointer;
+		transition: 0.3s;
+	}
+
+	.accordion .card-header .question {
+		margin-left: 15px;
+	}
+
+	.accordion .card-header i {
+		font-size: 1.2rem;
+		font-weight: bold;
+		position: absolute;
+		left: 0;
+		top: 9px;
+	}
+	.accordion .card-header:hover {
+		color: #0c63e4;
+	}
+	.accordion .card-body {
+		color: #324353;
+		padding: 0.8rem 2rem;
+		font-size: 20px;
+	}
+	.page-title {
+		margin: 3rem 0 3rem 1rem;
+		font-family: "Roboto", sans-serif;
+		position: relative;
+	}
+	.page-title::after {
+		content: "";
+		width: 80px;
+		position: absolute;
+		height: 3px;
+		border-radius: 1px;
+		background: #73bb2b;
+		left: 0;
+		bottom: -15px;
+	}
+	.accordion .highlight .btn {
+		color: #74bd30;
+	}
+	.accordion .highlight i {
+		transform: rotate(180deg);
+	}
+}

@@ -1,0 +1,32 @@
+@import './variables';
+
+// Breakpoints
+@mixin smMinBreakPoint {
+    @media (max-width: #{$screen-sm}) {
+        @content;
+    }
+}
+
+@mixin mdMinBreakPoint {
+    @media (max-width: #{$screen-md}) {
+        @content;
+    }
+}
+
+@mixin lgMinBreakPoint {
+    @media (max-width: #{$screen-lg}) {
+        @content;
+    }
+}
+
+@mixin xlMinBreakPoint {
+    @media (max-width: #{$screen-xl}) {
+        @content;
+    }
+}
+
+@mixin xxlMinBreakPoint {
+    @media (max-width: #{$screen-xxl}) {
+        @content;
+    }
+}

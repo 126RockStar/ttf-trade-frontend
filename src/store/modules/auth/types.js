@@ -1,0 +1,7 @@
+export const UPDATE_USER = 'auth/UPDATE_USER'
+export const UPDATE_ADMIN_PERMISSION = 'auth/UPDATE_ADMIN_PERMISSION'
+export const UPDATE_EXCHANGE = 'auth/UPDATE_EXCHANGE'
+export const UPDATE_ACCOUNTS = 'auth/UPDATE_ACCOUNTS'
+export const UPDATE_BALANCES = 'auth/UPDATE_BALANCES'
+export const UPDATE_TRADES = 'auth/UPDATE_TRADES'
+export const CHANGE_ACCOUNT = 'auth/CHANGE_ACCOUNT'

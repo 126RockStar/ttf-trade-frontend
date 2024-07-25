@@ -1,0 +1,109 @@
+.report-page {
+  display: flex;
+  flex-direction: column;
+
+  .date-filters {
+    padding: 20px 35px;
+    background: #161522;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    .date-period {
+      input[type="radio"] {
+				position: absolute;
+				opacity: 0;
+			}
+
+			.range {
+				-webkit-transition: all 0.2s;
+				transition: all 0.2s;
+			}
+
+			.range {
+				cursor: pointer;
+				padding: 8px 15px;
+				background: #202231;
+				color: white;
+				margin-right: 5px;
+				border-radius: 5px;
+
+				@media (max-width: 800px) {
+					padding: 0px 10px;
+				}
+			}
+
+			input[class="range"]:hover + .range,
+			input[class="range"]:checked + .range,
+			input[class="range"]:focus + .range {
+				// fill: rgb(0, 109, 217);
+				background: #5C83AD;
+			}
+    }
+
+    .date-range {
+      display: flex;
+      align-items: center;
+      color: white;
+
+      span {
+        cursor: pointer;
+      }
+    }
+  }
+
+  th {
+    background: white;
+    padding: 10px 5px;
+    color: black;
+    border: none;
+    font-size: 15px;
+  }
+
+  .control-bar {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px 0;
+
+    &--group--date {
+      margin-right: 10px;
+    }
+
+    &--group {
+      margin-right: 10px;
+    }
+
+    .expand-btn {
+      width: 140px;
+      margin-right: 10px;
+    }
+
+    select {
+      // background: #1976d2;
+      // color: white;
+      border-radius: 5px;
+      padding: 5px 5px;
+      cursor: pointer;
+    }
+  }
+
+  .apply-btn {
+    margin-left: 10px;
+  }
+
+  .export-btn {
+    width: 140px;
+  }
+
+  .csv-down-btn {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+.my-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 5px;
+}

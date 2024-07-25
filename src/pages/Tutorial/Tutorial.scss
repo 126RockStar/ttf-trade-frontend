@@ -1,0 +1,35 @@
+.skip-btn-div {
+  display: flex;
+  padding: 2rem;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+
+.img-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+h3 {
+  padding: 1.5rem;
+  font-size: 1.5rem;
+}
+
+.paginationCtrls {
+  display: flex;
+  margin-top: 3rem;
+  justify-content: center;
+}
+
+.page-btn {
+  margin: 1rem;
+}
+
+.btn {
+  border-radius: 1rem;
+  width: 4rem;
+  height: 2rem;
+  font-weight: bold;
+}
